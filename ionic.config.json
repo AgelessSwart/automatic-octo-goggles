@@ -1,0 +1,8 @@
+{
+  "name": "shuidi",
+  "app_id": "11bf12ee",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
