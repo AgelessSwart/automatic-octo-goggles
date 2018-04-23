@@ -1,3 +1,148 @@
 page-juankuan {
-
+    .content{
+        background-color: #FFFFFF;
+        position: relative;
+        .bg_content{
+            width: 100%;
+            height: 100%;
+            background-image: url(../../assets/imgs/love.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 100%;
+            filter: blur(20px);
+            opacity: 0.8;
+        }
+        .content_inner{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .text_box{
+                text-align: center;
+                .text_one{
+                    font-size: 22px;
+                    color: #f0626a;
+                    height: 35px;
+                    line-height: 35px;
+                    margin-top: 27px;
+                }
+                .text_two{
+                    height: 26px;
+                    line-height: 26px;
+                    font-size: 16px;
+                }
+                .text_three{
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 20px;
+                    color: #fd4444;
+                }
+            }
+            .fundraising_order{
+                padding-top: 30px;
+                li{
+                    width: 65%;
+                    margin: 0 auto;
+                    margin-bottom: 9px;
+                    background-color: #f4eeef;
+                    border-radius: 8px;
+                    p{
+                        font-size: 12px;
+                    }
+                    &>p:nth-child(1){
+                        height: 28px;
+                        line-height: 28px;
+                        color: #b988a0;
+                        width: 95%;
+                        margin: 0 auto;
+                        border-bottom: 1px solid #e7e7e7;
+                        font-size: 14px;
+                        span{
+                            display: inline-block;
+                            text-align: center;
+                            width: 17px;
+                            height: 17px;
+                            line-height: 17px;
+                            font-size: 14px;
+                            border-radius: 50%;
+                            background-color: #0dfa18;
+                            color: #FFFFFF;
+                            margin: 0 5px;
+                        }
+                    }
+                    &>p:nth-child(2) ,&>p:nth-child(3){
+                        padding-left: 3.3rem;
+                        height: 24px;
+                        line-height: 24px;
+                    }
+                }
+            }
+            .searchs{
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 50px;
+                background-color: #fefcfd;
+                padding: 14px 0;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+                li{
+                    text-align: center;
+                    position: relative;
+                    &:not(:last-child){
+                        margin-bottom: 20px;
+                    }
+                    &:not(:last-child):after{
+                        content: "›";
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        transform: rotate(90deg);
+                        position: absolute;
+                        bottom: -20px;
+                        left: 50%;
+                        font-size: 30px;
+                        color: #daeecb;
+                        text-align: center;
+                    }
+                    .icon{
+                        
+                    }
+                }
+            }
+            .phone_number{
+                height: 150px;
+                position: absolute;
+                bottom: 0;
+                text-align: center;
+                width: 100%;
+                background-color: #FFFFFF;
+                .number{
+                    height: 27px;
+                    line-height: 27px;
+                    color: #ff0000;
+                    font-size: 20px;
+                    margin-top: 21px;
+                }
+                .text{
+                    color: #bfbfbf;
+                    font-size: 12px;
+                    height: 19px;
+                    line-height: 19px;
+                }
+                .btn{
+                    width: 100%;
+                    height: 50px;
+                    background-color: #59dc75;
+                    font-size: 18px;
+                    color: #FFFFFF;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
 }

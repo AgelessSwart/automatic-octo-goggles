@@ -1,3 +1,144 @@
 page-contact {
-
+    .main_content{
+        background-color: #efefef;
+        .header_icon{
+            text-align: center;
+            .btn_class{
+                display: inline-block;
+                width: 85%;
+                height: 72px;
+                position: relative;
+                .settings{
+                    font-size: 36px;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #5be077;
+                }
+                .notification{
+                    font-size: 38px;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #5be077;
+                }
+            }
+        }
+        .user_box{
+            width: 95%;
+            height: 194px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            .user_top{
+                height: 110px;
+                border-radius: 10px;
+                background:-webkit-gradient(linear, 0 0, 0 bottom, from(#59dd75), to(#43bb5e));
+                .header_img{
+                    display: inline-block;
+                    height: 110px;
+                    line-height: 110px;
+                    padding-left: 18px;
+                    img{
+                        width: 68px;
+                        height: 68px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        border-radius: 50%;
+                    }
+                }
+                .loging_btn{
+                    display: inline-block;
+                    width: 60px;
+                    height: 23px;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 8px;
+                    color: #FFFFFF;background-color: inherit;
+                    margin-left: 63px;
+                }
+                .login_name{
+                    font-size: 20px;
+                    color: #FFFFFF;
+                    display: inline-block;
+                    padding-left: 1rem;
+                }
+            }
+            .user_messg{
+                display: flex;
+                height: 84px;
+                position: relative;
+                &:after{
+                    content: "";
+                    display: block;
+                    width: 1px;
+                    height: 50px;
+                    background-color: #eeeeee;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                li{
+                    flex: 1;
+                    text-align: center;
+                    p{
+                        padding-top: 20px;
+                        padding-bottom: 10px;
+                    }
+                    .fundraising{
+                        color: #ff0000;
+                    }
+                    .cheats{
+                        color: #FFFFFF;
+                        background-color: #56d972;
+                        border-radius: 10px;
+                        padding: 0 10px;
+                        line-height: 17px;
+                    }
+                }
+            }
+        }
+        .focus_on_sharing{
+            height: 105px;
+            width: 95%;
+            background-color: #FFFFFF;
+            margin: 0 auto;
+            margin-top: 20px;
+            border-radius: 8px;
+            .on_list{
+                height: 52px;
+                line-height: 52px;
+                width: 96%;
+                margin: 0 auto;
+                position: relative;
+                p{
+                    font-size: 14px;
+                    .list_right{
+                        height: 52px;
+                        line-height: 52px;
+                        float: right;
+                        font-size: 24px;
+                    }
+                    span{
+                        float: right;
+                        padding-right: 2rem;
+                        color: #ff0000;
+                    }
+                }
+                &:first-child{
+                    border-bottom: 1px solid #f2f2f2;
+                }
+                .icon{
+                    transform: scale(0.75);
+                    vertical-align: middle;
+                    margin-right: 1rem;
+                }
+                .icon2{
+                    font-size: 32px;
+                }
+            }
+        }
+    }
 }
