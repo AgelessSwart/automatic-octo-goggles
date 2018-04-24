@@ -1,0 +1,208 @@
+page-newproject {
+    
+    @keyframes topanm {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0%);
+        }
+    }
+    @-webkit-keyframes topanm {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0%);
+        }
+    }
+    
+    @keyframes dowanm {
+        from {
+            display: inline-block !important;
+            transform: translateY(0%);
+        }
+        to {
+            display: none;
+            transform: translateY(-100%);
+        }
+    }
+    @-webkit-keyframes dowanm {
+        from {
+            display: inline-block !important;
+            transform: translateY(0%);
+        }
+        to {
+            display: none;
+            transform: translateY(-100%);
+        }
+    }
+    
+    .content{
+        background-color: #f3f3f3;
+        position: relative;
+        text-align: center;
+        .top_notice{
+            color: #5be077;
+            height: 45px;
+            line-height: 45px;
+            background-color: #FFFFFF;
+            text-align: left;
+            padding-left: 1rem;
+            box-shadow: 0 0 6px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 10;
+            .notice_icon{
+                display: inline-block;
+                float: right;
+                font-size: 30px;
+                line-height: 45px;
+                margin-right: 1rem;
+            }
+        }
+        .form_box{
+            position: relative;
+            .sub_btn{
+                width: 100%;
+                height: 50px;
+                background-color: #59dc75;
+                font-size: 18px;
+                color: #FFFFFF;
+                position: absolute;
+                bottom: -50px;
+                left: 0;
+            }
+            .lastitem{
+                padding-bottom: 20px !important;
+            }
+            .item_box{
+                padding-bottom: 10px;
+                position: relative;
+                .img_content_box{
+                    width: 100%;
+                    padding: 10px 0;
+                    .select_btn{
+                        width: 95px;
+                        height: 95px;
+                        line-height: 110px;
+                        background-color: #FFFFFF;
+                        border-radius: 8px;
+                        text-align: center;
+                        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+                        margin-left: 5px;
+                        .select_icon{
+                            font-size: 38px;
+                            color: #5be077;
+                        }
+                    }
+                    .img_ht{
+                        font-size: 12px;
+                        color: #e1e1e1;
+                    }
+                }
+                input{
+                    padding: 5px 0 5px 5px;
+                    margin: 0;
+                    background-color: #f1f1f1;
+                    border-radius: 8px;
+                    font-size: 14px;
+                }
+                .text_content{
+                    display: none;
+                    height: auto;
+                    font-size: 12px;
+                    transform: translateY(0%);
+                    padding-bottom: 10px;
+                }
+                .instructions_content{
+                    display: none;
+                    height: auto;
+                    font-size: 12px;
+                    transform: translateY(0%);
+                    padding-bottom: 10px;
+                }
+                .img_content{
+                    display: none;
+                    height: auto;
+                    font-size: 12px;
+                    transform: translateY(0%);
+                    padding-bottom: 10px;
+                }
+                .topup{
+                    animation: topanm 0.3s 1;
+                    -webkit-animation: topanm 0.3s 1;
+                    animation-fill-mode:forwards;
+                    -webkit-animation-fill-mode:forwards;
+                    display: block;
+                }
+                .topdow{
+                    animation: dowanm 0.3s 1;
+                    -webkit-animation: dowanm 0.3s 1;
+                    animation-fill-mode:forwards;
+                    -webkit-animation-fill-mode:forwards;
+                }
+                .agree{
+                    font-size: 12px !important;
+                }
+                .item_label{
+                    pointer-events: auto;
+                    .terms{
+                        font-size: 12px;
+                        color: #62e17c;
+                        position: relative;
+                        z-index: 15;
+                    }
+                }
+                .bottom_number{
+                    font-size: 12px;
+                    text-align: center;
+                    display: inline;
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    span{
+                        color: #ff0000;
+                    }
+                }
+                .textarea_content{
+                    height: 80px;
+                    textarea{
+                        height: 80px;
+                        padding: 5px 0 5px 5px;
+                        margin: 0;
+                        background-color: #f1f1f1;
+                        border-radius: 8px;
+                        font-size: 14px;
+                    }
+                }
+                .number_after{
+                    position: relative;
+                }
+                .number_after:after{
+                    content: "元";
+                    position: absolute;
+                    right: 2rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 14px;
+                }
+                .item_label{
+                    font-size: 14px;
+                    .why_title{
+                        font-size: 12px;
+                        float: right;
+                        color: #ff706a;
+                        vertical-align: middle;
+                    }
+                    .instructions{
+                        font-size: 12px;
+                        float: right;
+                        color: #ff706a;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

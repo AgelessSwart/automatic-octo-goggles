@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+
+import { NewprojectPage } from '../newproject/newproject';
 
 @Component({
   selector: 'page-juankuan',
@@ -10,7 +12,8 @@ export class JuankuanPage {
 
 
   constructor(public navCtrl: NavController,
-  						public storage: Storage) {
+  						public storage: Storage,
+  						public modalCtrl: ModalController) {
 
   }
   
@@ -23,6 +26,9 @@ export class JuankuanPage {
   	console.log("back");
   	this.navCtrl.pop();
   }
-  
+  NewProject(){
+  	let modal = this.modalCtrl.create(NewprojectPage);
+  	modal.present();
+  }
 
 }

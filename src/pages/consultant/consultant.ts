@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, ModalController } from 'ionic-angular';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Storage } from '@ionic/storage';
+
+import { SubsucPage } from '../subsuc/subsuc';
 
 @Component({
   selector: 'page-consultant',
@@ -45,7 +47,8 @@ user = {
   constructor(public navCtrl: NavController,
   						public storage: Storage,
   						private fb: FormBuilder,
-  						private alertCtrl: AlertController) {
+  						private alertCtrl: AlertController,
+  						public modalCtrl: ModalController,) {
 		console.clear();
 		this.form = this.fb.group({
       skills: this.buildSkills()
@@ -55,7 +58,7 @@ user = {
   }
   
 	get skills() {
-    return this.form.get('skills');
+    return this.form.get('skills')
   };
   
   buildSkills() {
@@ -97,6 +100,8 @@ user = {
 	  console.log("formValue_cl");
 	  console.log(formValue);
 	  this.user = formValue;
+	  let modal = this.modalCtrl.create(SubsucPage);
+  	modal.present();
 	}
 
 }

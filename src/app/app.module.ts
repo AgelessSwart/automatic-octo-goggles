@@ -11,6 +11,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { JuankuanPage } from '../pages/juankuan/juankuan';
 import { LoginPage } from '../pages/login/login';
 import { ConsultantPage } from '../pages/consultant/consultant';
+import { SubsucPage } from '../pages/subsuc/subsuc';
+import { NewprojectPage } from '../pages/newproject/newproject';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +28,9 @@ import { SQLite } from '@ionic-native/sqlite';
     TabsPage,
     JuankuanPage,
     LoginPage,
-    ConsultantPage
+    ConsultantPage,
+    SubsucPage,
+    NewprojectPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,9 @@ import { SQLite } from '@ionic-native/sqlite';
     TabsPage,
     JuankuanPage,
     LoginPage,
-    ConsultantPage
+    ConsultantPage,
+    SubsucPage,
+    NewprojectPage
   ],
   providers: [
     StatusBar,

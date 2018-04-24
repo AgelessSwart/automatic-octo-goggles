@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar hideBackButton class="pd">
+  	<ion-buttons left>
+      <button ion-button (click)="backbtn()">
+        <ion-icon class="customIcon" name="md-close"></ion-icon>
+        	&nbsp;关闭
+      </button>
+   </ion-buttons>
+    <ion-title class="pd">
+            发起项目
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="content">
+	<div class="top_notice">
+		筹款信息不会写，点击这里帮你写
+		<ion-icon class="notice_icon" name="ios-arrow-forward-outline"></ion-icon>
+	</div>
+	<div class="form_box">
+		<ion-list no-lines>
+		  <ion-item class="item_box">
+		  	<ion-label class="item_label" stacked>目标金额</ion-label>
+		  	<ion-input class="number_after" type="number" placeholder="请输入目标金额"></ion-input>
+		  </ion-item>
+		  <ion-item class="item_box">
+		  	<ion-label class="item_label" stacked>筹款标题<span class="why_title" (click)="text_content = !text_content">如何写好标题&nbsp;&nbsp;<ion-icon name="ios-arrow-down-outline" *ngIf="!text_content"></ion-icon><ion-icon name="ios-arrow-up-outline" *ngIf="text_content"></ion-icon></span></ion-label>
+		  	<div class="text_content" item-content [ngClass]="{'topup': text_content, 'topdow': !text_content}">
+		  		<p> 标题应突出患者所在地域、工作、学校、年龄等特征属性，也可突出求助事件 严重性、紧急性或罕见性。<br />
+							实例：<br />
+							18个月溶血尿毒症患儿，爸爸妈妈等你回家
+							为了家中年近70的双亲和刚考上重点高中的儿子，我必须战胜癌症。
+							救救河北保定的这位人民教师，别让白血病夺走她的笑脸
+					</p>
+		  	</div>
+		  	<ion-input class="title_after" type="text" placeholder="好的标题筹款效果更好"></ion-input>
+		  </ion-item>
+		  <ion-item class="item_box">
+		  	<ion-label class="item_label" stacked>求助说明<span class="instructions" (click)="instructions_content = !instructions_content">如何写好说明&nbsp;&nbsp;<ion-icon name="ios-arrow-down-outline" *ngIf="!instructions_content"></ion-icon><ion-icon name="ios-arrow-up-outline" *ngIf="instructions_content"></ion-icon></span></ion-label>
+		  	<div class="instructions_content" item-content [ngClass]="{'topup': instructions_content, 'topdow': !instructions_content}">
+		  		<p> 
+		  				将如下四点进行简单介绍：<br />
+							患者信息：姓名、年龄、职业、家庭人员等信息。<br />
+							治疗过程：所患疾病、确诊时间、就诊医院、治疗方案和治疗费用。<br />
+							筹款原因：家庭真实情况，疾病治疗费用庞大等。<br />
+							求生欲望：向好心人寻求帮助，表达渴望渡过难关的心情
+
+					</p>
+		  	</div>
+		  	<ion-textarea class="textarea_content" type="textarea" placeholder="好的说明文章效果更好"></ion-textarea>
+		  </ion-item>
+		  <ion-item class="item_box">
+		  	<ion-label class="item_label" stacked>添加图片<span class="instructions" (click)="img_content = !img_content">什么样的图片好&nbsp;&nbsp;<ion-icon name="ios-arrow-down-outline" *ngIf="!img_content"></ion-icon><ion-icon name="ios-arrow-up-outline" *ngIf="img_content"></ion-icon></span></ion-label>
+		  	<div class="img_content" item-content [ngClass]="{'topup': img_content, 'topdow': !img_content}">
+		  		<p> 
+		  				建议上传医疗诊断结果、患者患病前的生活照和患病
+							后的治疗照，增加筹款项目真实性的同时通过对比给
+							人视觉冲击，提升筹款效果！
+					</p>
+		  	</div>
+		  	<div item-content class="img_content_box">
+		  		<div class="select_btn" (click)="presentActionSheet()">
+		  			<ion-icon class="select_icon" name="md-add"></ion-icon>
+		  		</div>
+		  		<span class="img_ht">上传图片（最多8张）</span>
+		  	</div>
+		  </ion-item>
+		  <ion-item class="item_box lastitem">
+	    	<ion-label class="item_label agree">我已经阅读并同意<span class="terms" (click)="message('1')">《项目发起条款》</span><span class="terms" (click)="message('2')">《发起人承诺书》</span></ion-label>
+		    <ion-checkbox [(ngModel)]="pepperoni" color="secondary"></ion-checkbox>
+		    <p item-content class="bottom_number"> 任何问题请拨打<span>4006526559</span></p>
+		  </ion-item>
+		</ion-list>
+		<button class="sub_btn">马上发起大病筹款</button>
+	</div>
+</ion-content>
