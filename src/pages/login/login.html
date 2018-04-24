@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+  	<ion-buttons left>
+      <button ion-button (click)="backbtn()">
+        <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+        	&nbsp;返回
+      </button>
+   </ion-buttons>
+    <ion-title>
+            登录
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="content">
+	<h2 class="login_title">你好，请登录/注册</h2>
+	<div class="login_input">
+		<ion-input class="phone_number" type="number" placeholder="请输入手机号码"></ion-input>
+		<ion-input class="ver_cord" type="text" placeholder="请输入验证码"></ion-input>
+		<button class="ver_btn" (click)="get_countdown()" [disabled]="count_type" >{{countdown}}<span *ngIf="count_type">s</span></button>
+		<p class="help_text">收不到验证码？</p>
+		<button class="sub_btn" ion-button block round>登录</button>
+	</div>
+</ion-content>

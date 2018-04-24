@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+  	<ion-buttons left>
+      <button ion-button (click)="backbtn()">
+        <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+        	&nbsp;返回
+      </button>
+   </ion-buttons>
+    <ion-title>
+            筹款顾问
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="content">
+	<div class="consultant_img">
+		<img src="../../assets/imgs/consultant_1.png"/>
+		<p>筹款顾问1对1服务</p>
+		<p>少走弯路多筹钱</p>
+		<p>耐心解答各种疑问，3分钟掌握筹款技巧</p>
+	</div>
+	<div class="phone_number_box">
+		<div class="inner_box">
+			<ion-icon class="inp_icon" name="ios-phone-portrait-outline"></ion-icon>
+			<ion-input class="inp" type="number" placeholder="请输入手机号"></ion-input>
+		</div>
+	</div>
+	<div class="chick_box">
+		<p>可以告诉我们你需要的帮助（非必填）</p>
+		<div class="chicked">
+			<form [formGroup]="form">
+				<label class="check_list" *ngFor="let skill of skills.controls; index as i;" (click)="alertsb(form.value)" [ngClass]="{'border': user.skills[i].selected}" tappable >
+					<span>{{user.skills[i].name}}</span>
+					<input [formControl]="skill" type="checkbox" name="help" [value]="user.skills[i].id" />
+				</label>
+				<button class="sub_btn" type="submit" ion-button block round (click)="submit(form.value)">获取筹款指导</button>
+			</form>
+		</div>
+	</div>
+</ion-content>

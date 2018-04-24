@@ -11,7 +11,7 @@
   				<img src="../../assets/imgs/header_png.png"/>
   			</div>
   			<p *ngIf="login_type" class="login_name">小明</p>
-  			<button *ngIf="!login_type" class="loging_btn">登录</button>
+  			<button *ngIf="!login_type" class="loging_btn" (click)="login()">登录</button>
   		</div>
   		<ul class="user_messg">
   			<li>

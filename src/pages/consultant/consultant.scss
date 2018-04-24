@@ -1,0 +1,96 @@
+page-consultant {
+    .content{
+        background-color: #FFFFFF;
+        position: relative;
+        .consultant_img{
+            height: 145px;
+            background: linear-gradient(to right,  #2cee82, #0ee917);
+//          background-color: #33e066;
+            img{
+                width: 94px;
+                float: left;
+                margin: 18px 15px 0 10px;
+            }
+            p{
+                color: #FFFFFF;
+                font-size: 16px;
+            }
+            & p:nth-of-type(1){
+                padding-top: 60px;
+            }
+            & p:nth-of-type(1), & p:nth-of-type(2){
+                padding-left: 9em;
+            }
+            & p:nth-of-type(3){
+                font-size: 12px;
+                padding-top: 15px;
+            }
+        }
+        .phone_number_box{
+            padding: 20px 0;
+            width: 100%;
+            .inner_box{
+                width: 90%;
+                height: 50px;
+                line-height: 50px;
+                background-color: #f3f3f3;
+                border-radius: 8px;
+                margin: 0 auto;
+                text-align: center;
+                .inp_icon{
+                    color: #d5d5d5;
+                    font-size: 24px;
+                    transform: translateY(4px);
+                }
+                .inp{
+                    display: inline-block;
+                    height: 20px;
+                    line-height: 20px;
+                    width: 30%;
+                    .text-input{
+                        display: inline-block;
+                        
+                    }
+                }
+            }
+        }
+        .chick_box{
+            width: 90%;
+            margin: 0 auto;
+        }
+        .chicked{
+            margin-top: 20px;
+            .border{
+                background-color: #0fe918;
+                border-color: #0fe918 !important;
+                color: #FFFFFF;
+            }
+            .check_list{
+                display: inline-block;
+                width: 40%;
+                margin: 0 5%;
+                margin-bottom: 10px;
+                text-align: center;
+                height: 36px;
+                line-height: 36px;
+                border: 2px solid #59dd75;
+                border-radius: 3px;
+                span{
+                    display: block;
+                    height: 32px;
+                    line-height: 32px;
+                    font-size: 12px;
+                    text-align: center;
+                }
+                input{
+                    opacity: 0;
+                    display: none;
+                }
+            }
+        }
+        .sub_btn{
+            background-color: #49c464;
+            margin-top: 20px;
+        }
+    }
+}

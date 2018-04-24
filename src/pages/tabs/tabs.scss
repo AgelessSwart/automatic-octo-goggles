@@ -23,14 +23,14 @@ page-tabs {
         z-index: 9999;
         border-radius: 45px;
         background-color: #f8f8f8;
-        height: 45px;
+        height: 37px;
         line-height: 37px;
         text-align: center;
         display: inline-block;
         vertical-align: top;
         left: 50%;
         transform: translateX(-50%);
-        padding-left: 1px;
+        padding-left: 0.5px;
     }
     .tabs-ios .tab-button:nth-of-type(2) .tab-button-text{
         position: absolute;

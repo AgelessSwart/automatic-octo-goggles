@@ -3,6 +3,7 @@ import { NavController, NavParams, Content, ModalController } from 'ionic-angula
 import { Storage } from '@ionic/storage';
 
 import { JuankuanPage } from '../juankuan/juankuan';
+import { ConsultantPage } from '../consultant/consultant';
 
 @Component({
   selector: 'page-home',
@@ -76,6 +77,12 @@ export class HomePage {
 	selectFriend() {
   	// 声明一个modal
   	let modal = this.modalCtrl.create(JuankuanPage);
+  	// 弹出modal
+  	modal.present();
+  }
+	Consultant() {
+  	// 声明一个modal
+  	let modal = this.modalCtrl.create(ConsultantPage);
   	// 弹出modal
   	modal.present();
   }

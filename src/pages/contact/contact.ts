@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController , Platform } from 'ionic-angular';
+import { NavController , Platform, ModalController } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
+
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-contact',
@@ -12,7 +14,8 @@ login_type: boolean = false;
 
   constructor(public navCtrl: NavController,
   						public platform: Platform,
-  						private callNumber: CallNumber) {
+  						private callNumber: CallNumber,
+  						public modalCtrl: ModalController,) {
 
   }
   
@@ -29,6 +32,11 @@ login_type: boolean = false;
 			  .then(res => console.log('Launched dialer!', res))
 			  .catch(err => console.log('Error launching dialer', err));
   	})
+  }
+  
+  login(){
+  	let modal = this.modalCtrl.create(LoginPage);
+  	modal.present();
   }
 
 }

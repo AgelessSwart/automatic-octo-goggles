@@ -9,6 +9,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { JuankuanPage } from '../pages/juankuan/juankuan';
+import { LoginPage } from '../pages/login/login';
+import { ConsultantPage } from '../pages/consultant/consultant';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +24,9 @@ import { SQLite } from '@ionic-native/sqlite';
     ContactPage,
     HomePage,
     TabsPage,
-    JuankuanPage
+    JuankuanPage,
+    LoginPage,
+    ConsultantPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,9 @@ import { SQLite } from '@ionic-native/sqlite';
     ContactPage,
     HomePage,
     TabsPage,
-    JuankuanPage
+    JuankuanPage,
+    LoginPage,
+    ConsultantPage
   ],
   providers: [
     StatusBar,
