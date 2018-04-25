@@ -13,6 +13,9 @@ import { LoginPage } from '../pages/login/login';
 import { ConsultantPage } from '../pages/consultant/consultant';
 import { SubsucPage } from '../pages/subsuc/subsuc';
 import { NewprojectPage } from '../pages/newproject/newproject';
+import { Invite_friendPage } from '../pages/invite_friend/invite_friend';
+import { ExpresswayPage } from '../pages/expressway/expressway';
+import { ProblemPage } from '../pages/problem/problem';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,7 +33,10 @@ import { SQLite } from '@ionic-native/sqlite';
     LoginPage,
     ConsultantPage,
     SubsucPage,
-    NewprojectPage
+    NewprojectPage,
+    Invite_friendPage,
+    ExpresswayPage,
+    ProblemPage
   ],
   imports: [
     BrowserModule,
@@ -51,7 +57,10 @@ import { SQLite } from '@ionic-native/sqlite';
     LoginPage,
     ConsultantPage,
     SubsucPage,
-    NewprojectPage
+    NewprojectPage,
+    Invite_friendPage,
+    ExpresswayPage,
+    ProblemPage
   ],
   providers: [
     StatusBar,

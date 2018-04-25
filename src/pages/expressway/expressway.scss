@@ -1,0 +1,40 @@
+page-expressway {
+    .content{
+        position: relative;
+        .btn{
+            width: 100%;
+            height: 50px;
+            background-color: #59dc75;
+            font-size: 18px;
+            color: #FFFFFF;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .list_header{
+            font-size: 18px;
+            padding-top: 10px;
+        }
+        .item_box{
+            padding: 5px 5%;
+            .datetime{
+                width: 76.5%;
+                font-size: 14px;
+            }
+            input{
+                font-size: 14px;
+            }
+            .number_after{
+                position: relative;
+                &:after{
+                    content: "万元";
+                    position: absolute;
+                    right: 2rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

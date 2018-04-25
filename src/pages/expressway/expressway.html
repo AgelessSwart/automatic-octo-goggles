@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+  	<ion-buttons left>
+      <button ion-button (click)="backbtn()">
+        <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+        	&nbsp;返回
+      </button>
+   </ion-buttons>
+    <ion-title>
+            快速发起通道
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="content">
+	<ion-list no-lines>
+	  <ion-list-header class="list_header">
+	    请填写如下信息
+	  </ion-list-header>
+	  <ion-item class="item_box">
+	  	<ion-label class="item_label">患者姓名</ion-label>
+	  	<ion-input class="text_after" type="text" placeholder="输入患者姓名"></ion-input>
+	  </ion-item>
+	  <ion-item class="item_box">
+	  	<ion-label class="item_label">所在地区</ion-label>
+	  	<ion-input class="text_after" type="text" placeholder="如北京市通州区宋庄镇"></ion-input>
+	  </ion-item>
+	  <ion-item class="item_box">
+	  	<ion-label class="item_label">所患疾病</ion-label>
+	  	<ion-input class="text_after" type="text" placeholder="输入患者所患疾病"></ion-input>
+	  </ion-item>
+	  <ion-item class="item_box">
+	  	<ion-label class="item_label">何时确诊</ion-label>
+	  	<ion-datetime displayFormat="YYYY/MM/DD" (ionChange)="datetime(myDate)" [(ngModel)]="myDate" placeholder="选择确诊时间" cancelText="取消" doneText="确定"></ion-datetime>
+	  </ion-item>
+	  <ion-item class="item_box">
+	  	<ion-label class="item_label">花费多少</ion-label>
+	  	<ion-input class="number_after" type="number" placeholder="花费多少"></ion-input>
+	  </ion-item>
+	  <ion-item class="item_box">
+	  	<ion-label class="item_label">想筹多少</ion-label>
+	  	<ion-input class="number_after" type="number" placeholder="想筹多少"></ion-input>
+	  </ion-item>
+	</ion-list>
+	<button class="btn" (click)="subsuc()">马上发起大病筹款</button>
+</ion-content>

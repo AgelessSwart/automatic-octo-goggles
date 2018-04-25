@@ -14,7 +14,7 @@
 
 
 <ion-content class="content">
-	<div class="top_notice">
+	<div class="top_notice" (click)="Expressway()">
 		筹款信息不会写，点击这里帮你写
 		<ion-icon class="notice_icon" name="ios-arrow-forward-outline"></ion-icon>
 	</div>
@@ -69,9 +69,9 @@
 		  <ion-item class="item_box lastitem">
 	    	<ion-label class="item_label agree">我已经阅读并同意<span class="terms" (click)="message('1')">《项目发起条款》</span><span class="terms" (click)="message('2')">《发起人承诺书》</span></ion-label>
 		    <ion-checkbox [(ngModel)]="pepperoni" color="secondary"></ion-checkbox>
-		    <p item-content class="bottom_number"> 任何问题请拨打<span>4006526559</span></p>
+		    <p item-content class="bottom_number"> 任何问题请拨打<span (click)="callnumber()">4006526559</span></p>
 		  </ion-item>
 		</ion-list>
-		<button class="sub_btn">马上发起大病筹款</button>
+		<button class="sub_btn" (click)="subsuc()">马上发起大病筹款</button>
 	</div>
 </ion-content>

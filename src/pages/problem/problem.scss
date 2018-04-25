@@ -1,0 +1,74 @@
+page-problem {
+    .content{
+        position: relative;
+        background-color: #f2f2f2;
+        .header_banner{
+            height: 145px;
+            background-color: #e8f1ff;
+            padding: 0 30px;
+            img{
+                float: left;
+                margin: 20px 20px 0 0px;
+                height: 106px;
+            }
+            & p:nth-of-type(1){
+                font-size: 18px;
+                color: #1d3294;
+                padding-top: 34px;
+            }
+            & p:nth-of-type(2){
+                font-size: 14px;
+                color: #4c6487;
+                padding: 5px 0;
+            }
+            & p:nth-of-type(3){
+                font-size: 14px;
+                color: #3e5179;
+            }
+        }
+        .problem_list{
+            
+            .border_bottom{
+                border-bottom: 1px solid #d8d8d8;
+            }
+            .one_list_item{
+                line-height: 44px;
+                .one_list_title{
+                    width: 100%;
+                    padding: 0 5%;
+                    display: inline-block;
+                    font-weight: bold;
+                    color: #9d9d9d;
+                    position: relative;
+                    font-size: 16px;
+                    border-bottom: 1px solid #d8d8d8;
+                    .downup_icon{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 5%;
+                        font-size: 24px;
+                    }
+                }
+                .two_list_item{
+                    
+                    .two_list_title{
+                        display: inline-block;
+                        width: 95%;
+                        height: 50px;
+                        line-height: 50px;
+                        margin-left: 5%;
+                        font-size: 16px;
+                    }
+                    .list_inner_text{
+                        padding: 15px 5%;
+                        line-height: 1.4;
+                        background-color: #ebebeb;
+                        color: #8c8c8c;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

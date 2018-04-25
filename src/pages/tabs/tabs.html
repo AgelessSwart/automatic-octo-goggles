@@ -1,5 +1,5 @@
 <ion-tabs #myTabs>
-  <ion-tab [root]="tabHome" swipeBackEnabled="true" tabsHideOnSubPages="false" tabTitle="首页" tabIcon="ios-home-outline"></ion-tab>
-  <ion-tab  (ionSelect)="selectFriend()" swipeBackEnabled="true" tabsHideOnSubPages="false" tabTitle="发起募捐" tabIcon="md-add-circle"></ion-tab>
-  <ion-tab [root]="tabMy" swipeBackEnabled="true" tabsHideOnSubPages="false" tabTitle="我的" tabIcon="ios-contact-outline"></ion-tab>
+  <ion-tab [root]="tabHome" swipeBackEnabled="true" tabsHideOnSubPages="true" tabTitle="首页" tabIcon="ios-home-outline"></ion-tab>
+  <ion-tab  (ionSelect)="selectFriend()" swipeBackEnabled="true" tabsHideOnSubPages="true" tabTitle="发起募捐" tabIcon="md-add-circle"></ion-tab>
+  <ion-tab [root]="tabMy" swipeBackEnabled="true" tabsHideOnSubPages="true" tabTitle="我的" tabIcon="ios-contact-outline"></ion-tab>
 </ion-tabs>

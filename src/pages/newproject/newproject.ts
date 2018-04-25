@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController, ActionSheetController } from 'ionic-angular';
+import { NavController, ActionSheetController, Platform, ModalController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
-import { TabsPage } from '../tabs/tabs';
+import { CallNumber } from '@ionic-native/call-number';
+
+import { ExpresswayPage } from '../expressway/expressway';  
+import { SubsucPage } from '../subsuc/subsuc';  
 
 @Component({
   selector: 'page-newproject',
@@ -17,7 +20,10 @@ img_content: boolean = false;
 
   constructor(public navCtrl: NavController,
   						public storage: Storage,
-  						public actionSheetCtrl: ActionSheetController) {
+  						public platform: Platform,
+  						private callNumber: CallNumber,
+  						public actionSheetCtrl: ActionSheetController,
+  						public modalCtrl: ModalController) {
 
   }
   
@@ -28,6 +34,15 @@ img_content: boolean = false;
   
   message(type){
   	console.log(type);
+  }
+  
+  Expressway(){
+  	let modal = this.modalCtrl.create(ExpresswayPage);
+  	modal.present();
+  }
+  subsuc(){
+  	let modal = this.modalCtrl.create(SubsucPage);
+  	modal.present();
   }
   
   presentActionSheet() {
@@ -56,5 +71,17 @@ img_content: boolean = false;
     });
     actionSheet.present();
   }
-
+	
+	callnumber(){
+  	console.log("callnumber");
+  	if(!this.platform.ready()){
+  		window.location.href = "tel://4006526559";
+  	}
+  	this.platform.ready().then(() =>{
+		  this.callNumber.callNumber("4006526559", true)
+			  .then(res => console.log('Launched dialer!', res))
+			  .catch(err => console.log('Error launching dialer', err));
+  	})
+  }
+	
 }

@@ -1,7 +1,7 @@
 <ion-content class="main_content">
   	<div class="header_icon">
   		<p class="btn_class">
-  			<ion-icon class="settings" name="ios-settings-outline"></ion-icon>
+  			<ion-icon class="settings" name="ios-settings-outline" style="display: none;"></ion-icon>
   			<ion-icon class="notification" name="ios-mail-outline"></ion-icon>
   		</p>
   	</div>
@@ -25,7 +25,7 @@
   		</ul>
   	</div>
   	<div class="focus_on_sharing">
-  		<div class="on_list" (click)="userlist()">
+  		<div class="on_list" (click)="userlist('1')">
   			<p>
 					<svg t="1524120038064" class="icon" style="" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2743" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.03125" height="32">
 						<defs>
@@ -37,7 +37,7 @@
 					<ion-icon class="list_right" name="ios-arrow-forward-outline"></ion-icon>
   			</p>
   		</div>
-  		<div class="on_list" (click)="userlist()">
+  		<div class="on_list" (click)="userlist('2')">
   			<p>
 					<svg t="1524120697088" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3490" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32">
 						<defs>
@@ -54,7 +54,7 @@
   		</div>
   	</div>
   	<div class="focus_on_sharing">
-  		<div class="on_list" (click)="userlist()">
+  		<div class="on_list" (click)="userlist('3')">
   			<p>
 					<ion-icon class="icon2" name="ios-help-circle-outline"></ion-icon>			
 					常见问题

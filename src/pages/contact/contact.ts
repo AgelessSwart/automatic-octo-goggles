@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController , Platform, ModalController } from 'ionic-angular';
+import { NavController, Platform, ModalController } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 
 import { LoginPage } from '../login/login';
+import { Invite_friendPage } from '../invite_friend/invite_friend';
+import { ProblemPage } from '../problem/problem';
 
 @Component({
   selector: 'page-contact',
@@ -19,8 +21,19 @@ login_type: boolean = false;
 
   }
   
-  userlist(){
+  userlist(data){
   	console.log("123");
+  	if(data == 1){
+//		let modal = this.modalCtrl.create(Invite_friendPage);
+//		modal.present();
+  		this.navCtrl.push(Invite_friendPage)
+  	}else if(data == 2){
+  		
+  	}else if(data == 3){
+//		let modal = this.modalCtrl.create(ProblemPage);
+//		modal.present();
+  		this.navCtrl.push(ProblemPage)
+  	}
   }
   callnumber(){
   	console.log("callnumber");
