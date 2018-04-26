@@ -21,11 +21,11 @@
 		<p>我们竭诚为您服务，如遇客服排队，请您耐心等待</p>
 	</div>
 	<div class="problem_list">
-		<div class="one_list_item" *ngFor="let listdata of maindata; index as i;">
-			<span class="one_list_title" (click)="listdata.listtype = !listdata.listtype">{{listdata.listtitle}}<ion-icon class="downup_icon" name="ios-arrow-down-outline" [hidden]="!listdata.listtype"></ion-icon><ion-icon class="downup_icon" name="ios-arrow-up-outline" [hidden]="listdata.listtype"></ion-icon></span>
-			<div class="two_list_item" [hidden]="listdata.listtype" *ngFor="let itemdata of listdata.listlist; index as i;">
-				<span class="two_list_title" (click)="itemdata.itemtype = !itemdata.itemtype" [ngClass]="{border_bottom : itemdata.itemtype}">{{itemdata.itemtitle}}</span>
-				<div class="list_inner_text" [hidden]="itemdata.itemtype">
+		<div class="one_list_item" *ngFor="let listdata of maindata; index as i;" data="listdata.data = false">
+			<span class="one_list_title" (click)="listdata.data = !listdata.data">{{listdata.listtitle}}<ion-icon class="downup_icon" name="ios-arrow-down-outline" [hidden]="listdata.data"></ion-icon><ion-icon class="downup_icon" name="ios-arrow-up-outline" [hidden]="!listdata.data"></ion-icon></span>
+			<div class="two_list_item" [hidden]="!listdata.data" *ngFor="let itemdata of listdata.listlist; index as i;" data="itemdata.data = false">
+				<span class="two_list_title" (click)="itemdata.data = !itemdata.data" [ngClass]="{border_bottom : !itemdata.data}">{{itemdata.itemtitle}}</span>
+				<div class="list_inner_text" [hidden]="!itemdata.data">
 					{{itemdata.iteminnertext}}
 				</div>
 			</div>
