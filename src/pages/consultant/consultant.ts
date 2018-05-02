@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, ModalController } from 'ionic-angular';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { NavController, ModalController } from 'ionic-angular';
+import { FormBuilder } from '@angular/forms';
 import { Storage } from '@ionic/storage';
 
 import { SubsucPage } from '../subsuc/subsuc';
@@ -47,7 +47,6 @@ user = {
   constructor(public navCtrl: NavController,
   						public storage: Storage,
   						private fb: FormBuilder,
-  						private alertCtrl: AlertController,
   						public modalCtrl: ModalController,) {
 		console.clear();
 		this.form = this.fb.group({

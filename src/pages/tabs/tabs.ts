@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Events, Tabs, ModalController } from 'ionic-angular';
+import { NavController, Events, Tabs, ModalController, NavParams } from 'ionic-angular';
 
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
@@ -21,10 +21,14 @@ export class TabsPage {
 
   constructor(public navCtrl: NavController,
 			  public events: Events,
-  			  public modalCtrl: ModalController,) {
+  			  public modalCtrl: ModalController,
+			  public navParams: NavParams) {
   }
-  backTabs(idx = 0){
-  	this.tabRef.select(idx);
+  ionViewDidEnter(){
+  	console.log("back tab");
+  	this.idx = this.navParams.get('tabtype');
+  	console.log(this.idx);
+  	this.tabRef.select(this.idx);
   }
   
   selectFriend() {

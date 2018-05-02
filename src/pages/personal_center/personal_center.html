@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+  	<ion-buttons left>
+      <button ion-button (click)="backbtn()">
+        <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+        	&nbsp;返回
+      </button>
+   </ion-buttons>
+    <ion-title>
+            个人中心
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="content">
+	<dl class="main_list">
+		<dt class="user_header_img">
+			<span>头像</span>
+			<img src="../../assets/imgs/header_png.png"/>
+		</dt>
+		<dd class="msg_list">
+			<span>昵称</span>
+			<p>卡密萨马</p>
+			<ion-icon [hidden]="false" class="right_icon" name="arrow-forward"></ion-icon>
+		</dd>
+		<dd class="msg_list">
+			<span>手机号</span>
+			<p>18617104998</p>
+			<ion-icon [hidden]="true" class="right_icon" name="arrow-forward"></ion-icon>
+		</dd>
+		<dd class="msg_list">
+			<span>设置密码</span>
+			<ion-icon [hidden]="false" class="right_icon" name="arrow-forward"></ion-icon>
+		</dd>
+		<dd class="msg_list no_border">
+			<span>账号绑定</span>
+			<ion-icon [hidden]="false" class="right_icon" name="arrow-forward"></ion-icon>
+		</dd>
+		<dd class="msg_list top_mg">
+			<span>关于我们</span>
+			<ion-icon [hidden]="false" class="right_icon" name="arrow-forward"></ion-icon>
+		</dd>
+	</dl>
+	<button class="exit_btn" ion-button block>退出登录</button>
+</ion-content>

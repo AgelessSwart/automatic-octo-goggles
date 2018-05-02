@@ -12,8 +12,11 @@ declare var screen :any;
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TabsPage;
-  database: SQLiteObject;
+	
+	
+rootPage:any = TabsPage;
+database: SQLiteObject;
+  
   constructor(public platform: Platform,
 					  	statusBar: StatusBar,
 					  	splashScreen: SplashScreen,
@@ -31,13 +34,13 @@ export class MyApp {
 	initDB(){
 		console.log("intdb");
 		this.sqlite.create({
-		    name: ' fundraising.db',//数据库名称
-		    location: 'default'
-		  })
+	    name: ' fundraising.db',//数据库名称
+	    location: 'default'
+	  })
 		.then((db: SQLiteObject) => {
-		    db.executeSql('create table if not exists login(id INTEGER PRIMARY KEY AUTOINCREMENT, login_type BOOLEAN default 0, username text NOT NULL, loginname text NOT NULL, password text NOT NULL, end_time text NOT NULL)', {})//信息数据表
-		    	.then(() => console.log('login SQLdb ok'))
-		    	.catch(e => console.log(e));
-			})
+	    db.executeSql('create table if not exists login_type (id INTEGER PRIMARY KEY AUTOINCREMENT, login_type BOOLEAN NOT NULL, phone_number VARCHAR NOT NULL)', {})//信息数据表
+	    	.then(() => console.log('login SQLdb ok'))
+	    	.catch(e => console.log(e));
+		})
 	}
 }

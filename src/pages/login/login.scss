@@ -11,6 +11,9 @@ page-login {
             position: relative;
             .phone_number{
                 border-bottom: 1px solid #d8d8d8;
+                input{
+                    width: calc(65% - 8px);
+                }
             }
             .ver_cord{
                 border-bottom: 1px solid #d8d8d8;
@@ -18,10 +21,10 @@ page-login {
             }
             .ver_btn{
                 position: absolute;
-                color: #8ae39d;
+                color: #22d027;
                 top: 21px;
-                right: 60px;
-                font-size: 16px;
+                right: 50px;
+                font-size: 14px;
                 background-color: rgba(0,0,0,0);
             }
             .help_text{
